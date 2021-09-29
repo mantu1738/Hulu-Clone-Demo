@@ -80,6 +80,16 @@ img{
     color: #fff;
     border-color: #666666;
 }
+.btn-dark{
+   background: #000;
+   color: #fff;    
+}
+
+.btn-dark:hover{
+    background: #333333;
+    color: #fff;
+}
+
 
 .legal-text{
     font-size: 10px;
@@ -103,6 +113,7 @@ img{
     margin-bottom: 10px;
     font-size: 24px;
 }
+
 
 /***************HEADER SECTION*********************/
 
@@ -356,6 +367,86 @@ img{
 }
 
 
+/**************modal Section login part************/
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-box{
+    margin: 10% auto;
+    width: 400px;
+    background: #ffffff;
+    color: #333333;
+    position: relative;
+    animation: modalopen 1s;
+}
+
+@keyframes modalopen{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.modal-body{
+    padding: 50px;
+}
+
+.modal-body .btn{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.modal .close{
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal-footer{
+    background: #f7f7f9;
+    color: #333;
+    padding: 20px 0;
+    border-top: #333 1px solid;
+    text-align:center;
+
+}
+
+.modal .modal-footer a{
+    color: steelblue;
+}
+
+/*****Form******/
+.form-control {
+    margin: 20px 0;
+}
+
+.form-control label{
+    display: block;
+    text-transform: uppercase;
+}
+
+.form-control input{
+    width: 100%;
+    border: 2px #ccc solid;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px;
+}
+
 /*Media Quries of Header*/
 
 @media(max-width:1100px){
@@ -428,5 +519,9 @@ img{
     .footer-lists{
         flex-direction: column;
         align-items: inherit;
+    }
+
+    .modal .modal-box{
+        width: 350px;
     }
 }
